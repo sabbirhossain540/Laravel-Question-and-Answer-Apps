@@ -34,7 +34,7 @@
                         
                             <div class="media-body">
                                 <div class="d-flex flex-column counters" >
-                                    <h3 class="mt-0"><a href="{{ $question->id }}">{{ $question->title }}</a></h3>
+                                    <h3 class="mt-0"><a href="{{ $question->url }}">{{ $question->title }}</a></h3>
                                     <div class="ml-auto">
                                         <a href="{{ route('questions.edit', $question->id ) }}" class="btn btn-outline-info btn-sm">Edit</a>
                                         <form class="form-delete" method="post" action="{{ route('questions.destroy', $question->id) }}">
