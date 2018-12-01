@@ -19,6 +19,7 @@
                                 <div class="float-right">
                                     <span class="text-muted">Answered {{ $question->created_date }}</span>
                                     <div class="media mt-2" >
+
                                         <a href="{{ $question->user->url }}" class="pr-2">
                                             <img src="{{ $question->user->avatar }}">
                                         </a>
@@ -36,5 +37,7 @@
     'answers' => $question->answers,
     'answersCount' => $question->answer_count
     ])
+
+   
 </div>
 @endsection

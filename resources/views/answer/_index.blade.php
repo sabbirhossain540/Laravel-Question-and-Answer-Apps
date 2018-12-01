@@ -6,8 +6,23 @@
                         <h2>{{ $answersCount." ". str_plural('Answer', $answersCount) }}</h2>
                     </div>
                     <hr>
+
+                    @include('layouts._message')
                     @foreach($answers as $answer)
                         <div class="media">
+                            <div class="d-flex flex-column vote-controls">
+                                <a title="The Answer is Useful" class="vote-up">
+                                    <i class="fas fa-caret-up fa-3x"></i>
+                                </a>
+                                <span class="vote-count">1230</span>
+                                <a title="The Answer is bnot Useful" class="vote-down off">
+                                    <i class="fas fa-caret-down fa-3x"></i>
+                                </a>
+
+                                <a title="Mark this answer as best answer" class="vote-accepted mt2">
+                                    <i class="fas fa-check fa-2x"></i>
+                                </a>
+                            </div>
                             <div class="media-body">
                                 {!! $answer->body_html !!}
                                 <div class="float-right">
@@ -25,6 +40,7 @@
                         </div>
                         <hr>
                     @endforeach
+                    @include('answer._create')
                 </div>
             </div>
         </div>
