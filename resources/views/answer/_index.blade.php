@@ -21,6 +21,7 @@
 
                                 <a title="Mark this answer as best answer" class="vote-accepted mt2">
                                     <i class="fas fa-check fa-2x"></i>
+                                  
                                 </a>
                             </div>
                             <div class="media-body">
